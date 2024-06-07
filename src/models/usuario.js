@@ -8,14 +8,22 @@ const usuarioSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
+        validate: {
+            validator: function(v) {
+                return /\S+@\S+\.\S+/.test(v);
+            },
+            message: props => `${props.value} não é um e-mail válido!`
+        }
     },
     senha: {
         type: String,
-        required: true
+        required: true,
+        minlength: 6
     }
 });
 
-const Usuario = mongoose.model('Usuario', usuarioSchema);
+// Verifica se o modelo já está definido antes de redefinir
+const Usuario = mongoose.models.Usuario || mongoose.model('Usuario', usuarioSchema);
 
 module.exports = Usuario;
