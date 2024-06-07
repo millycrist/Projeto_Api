@@ -7,10 +7,10 @@ DBconnection()
 
 app.use(express.json())
 
-const autenticacaoRoutes = require('./src/routes/autenticacao.routes')
+const autenticacaoRoutes = require('./src/routes/autenticaçao.routes')
 app.use(autenticacaoRoutes)
 
-const { checarToken } = require('./src/validators/AutenticacaoValidator')
+const { checarToken } = require('./src/validators/usuarioValidator')
 
 const routes = require('./src/routes/routes')
 app.use("/", checarToken, routes)
