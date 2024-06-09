@@ -1,7 +1,7 @@
 const express = require('express');
-const router = express.Router();
+const roteador = express.Router();
 
-// Importando os controllers
+// Importando os controladores
 const ConsultaController = require('../controllers/ConsultaController');
 const EspecialidadeController = require('../controllers/EspecialidadeController');
 const MedicoController = require('../controllers/MedicoController');
@@ -9,38 +9,38 @@ const PacienteController = require('../controllers/PacienteController');
 const PagamentoConsultaController = require('../controllers/PagamentoConsultaController');
 
 // Rotas para Consultas
-router.post('/consultas', ConsultaController.create);
-router.get('/consultas', ConsultaController.getAll);
-router.get('/consultas/:id', ConsultaController.getById);
-router.put('/consultas/:id', ConsultaController.update);
-router.delete('/consultas/:id', ConsultaController.remove);
+roteador.post('/consultas', ConsultaController.create);
+roteador.get('/consultas', ConsultaController.getAll);
+roteador.get('/consultas/:id', ConsultaController.getById);
+roteador.put('/consultas/:id', ConsultaController.update);
+roteador.delete('/consultas/:id', ConsultaController.remove);
 
 // Rotas para Especialidades
-router.post('/especialidades', EspecialidadeController.create);
-router.get('/especialidades', EspecialidadeController.getAll);
-router.get('/especialidades/:id', EspecialidadeController.getById);
-router.put('/especialidades/:id', EspecialidadeController.update);
-router.delete('/especialidades/:id', EspecialidadeController.remove);
+roteador.post('/especialidades', EspecialidadeController.create);
+roteador.get('/especialidades', EspecialidadeController.getAll);
+roteador.get('/especialidades/:id', EspecialidadeController.getById);
+roteador.put('/especialidades/:id', EspecialidadeController.update);
+roteador.delete('/especialidades/:id', EspecialidadeController.remove);
 
 // Rotas para Médicos
-router.post('/medicos', MedicoController.create);
-router.get('/medicos', MedicoController.getAll);
-router.get('/medicos/:id', MedicoController.getById);
-router.put('/medicos/:id', MedicoController.update);
-router.delete('/medicos/:id', MedicoController.remove);
+roteador.post('/medicos', MedicoController.create);
+roteador.get('/medicos', MedicoController.getAll);
+roteador.get('/medicos/:id', MedicoController.getById);
+roteador.put('/medicos/:id', MedicoController.update);
+roteador.delete('/medicos/:id', MedicoController.remove);
 
 // Rotas para Pacientes
-router.post('/pacientes', PacienteController.create);
-router.get('/pacientes', PacienteController.getAll);
-router.get('/pacientes/:id', PacienteController.getById);
-router.put('/pacientes/:id', PacienteController.update);
-router.delete('/pacientes/:id', PacienteController.remove);
+roteador.post('/pacientes', PacienteController.create);
+roteador.get('/pacientes', PacienteController.getAll);
+roteador.get('/pacientes/:id', PacienteController.getById);
+roteador.put('/pacientes/:id', PacienteController.update);
+roteador.delete('/pacientes/:id', PacienteController.remove);
 
 // Rotas para Pagamentos de Consultas
-router.post('/pagamentos-consultas', PagamentoConsultaController.create);
-router.get('/pagamentos-consultas', PagamentoConsultaController.getAll);
-router.get('/pagamentos-consultas/:id', PagamentoConsultaController.getById);
-router.put('/pagamentos-consultas/:id', PagamentoConsultaController.update);
-router.delete('/pagamentos-consultas/:id', PagamentoConsultaController.remove);
+roteador.post('/pagamentos-consultas', PagamentoConsultaController.create);
+roteador.get('/pagamentos-consultas', PagamentoConsultaController.getAll);
+roteador.get('/pagamentos-consultas/:id', PagamentoConsultaController.getById);
+roteador.put('/pagamentos-consultas/:id', PagamentoConsultaController.update);
+roteador.delete('/pagamentos-consultas/:id', PagamentoConsultaController.remove);
 
-module.exports = router;
+module.exports = roteador;
