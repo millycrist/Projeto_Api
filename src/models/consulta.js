@@ -1,24 +1,18 @@
 const mongoose = require('mongoose');
 
 const consultaSchema = new mongoose.Schema({
-    data: {
-        type: Date,
-        required: true
-    },
+    data: Date,
     paciente: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Paciente',
-        required: true
+        ref: 'Paciente'
     },
     medico: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Medico',
-        required: true
+        ref: 'Medico'
     },
     especialidade: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Especialidade',
-        required: true
+        ref: 'Especialidade'
     },
     pago: {
         type: Boolean,

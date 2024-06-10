@@ -6,7 +6,7 @@ const usuarioRoutes = require('./src/routes/usuario.routes');
 const consultaRoutes = require('./src/routes/consulta.routes');
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 app.use(express.json());
 
