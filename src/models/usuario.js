@@ -23,7 +23,6 @@ const usuarioSchema = new mongoose.Schema({
     }
 });
 
-// Verifica se o modelo já está definido antes de redefinir
-const Usuario = mongoose.models.Usuario || mongoose.model('Usuario', usuarioSchema);
+const Usuario = mongoose.model('Usuario', usuarioSchema);
 
 module.exports = Usuario;
