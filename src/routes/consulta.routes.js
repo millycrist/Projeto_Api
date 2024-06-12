@@ -8,11 +8,11 @@ const PacienteController = require('../controllers/PacienteController');
 const PagamentoConsultaController = require('../controllers/PagamentoConsultaController');
 
 // Rotas para Consultas
-router.post('/consultas', ConsultaController.create);
-router.get('/consultas', ConsultaController.getAll);
-router.get('/consultas/:id', ConsultaController.getById);
-router.put('/consultas/:id', ConsultaController.update);
-router.delete('/consultas/:id', ConsultaController.remove);
+router.post('/Consultas', ConsultaController.create);
+router.get('/Consultas', ConsultaController.getAll);
+router.get('/Consultas/:id', ConsultaController.getById);
+router.put('/Consultas/:id', ConsultaController.update);
+router.delete('/Consultas/:id', ConsultaController.remove);
 
 // Rotas para Especialidades
 router.post('/especialidades', EspecialidadeController.create);
@@ -23,7 +23,7 @@ router.delete('/especialidades/:id', EspecialidadeController.remove);
 
 // Rotas para Médicos
 router.post('/medicos', MedicoController.create);
-router.get('/medicos', MedicoController.getAll);
+router.get('/medicos', MedicoController.getAll);  
 router.get('/medicos/:id', MedicoController.getById);
 router.put('/medicos/:id', MedicoController.update);
 router.delete('/medicos/:id', MedicoController.remove);

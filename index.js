@@ -12,10 +12,15 @@ app.use(express.json());
 
 const mongoURI = process.env.MONGODB_URI;
 
+const routes = require('./src/routes/usuario.routes')
+app.use("/", routes)
+const routes2 = require('./src/routes/consulta.routes')
+app.use("/", routes2)
+
 if (!mongoURI) {
     console.error('A variável de ambiente MONGODB_URI não está definida');
-    process.exit(1);
-}
+    process.exit(1); 
+} 
 
 mongoose.connect(mongoURI)
     .then(() => {
