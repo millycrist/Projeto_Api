@@ -1,13 +1,14 @@
 const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 const transporter = nodemailer.createTransport({
-    host: 'smtp.example.com',
-    port: 587,
-    secure: false, 
-    auth: {
-        user: 'milenahosan99@gmil.com',
-        pass: '1809*Milly'
-    }
+  host: process.env.HOST,
+  port: process.env.PORTA,
+  secure:false, // Convertendo para booleano
+  auth: {
+    user: process.env.USER,
+    pass: process.env.PASS,
+  }
 });
 
 module.exports = transporter;

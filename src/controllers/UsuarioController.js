@@ -25,7 +25,7 @@ async function registrar(req, res) {
     await usuario.save()
 
     const info = await transporter.sendMail({
-        from: 'milenahosana99@gmail.com', 
+        from: 'Clínica <milenahosana99@gmail.com>', // Seu e-mail remetente
         to: email,
         subject: 'Bem-vindo ao nosso serviço!',
         html:'<h1>Olá, você foi cadastrado com sucesso em nosso serviço.</h1><p>Esperamos que aproveite!</p>',
